@@ -1,0 +1,39 @@
+{% block content %}
+<form action="/empform/" method="post">
+    {%csrf_token%}
+    {% if msg %}
+    <u>{{msg}}</u>
+    {%endif%}
+    {{ form.as_p }}
+    <input type='submit' value='Save'/>
+</form>
+<!--<div>
+       <table>
+            <thead>
+            <td>Title</td>>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Age</td>
+            </thead>
+            {%for employee in empdetail %}
+                <tbody>
+                <tr>
+                    <td>
+                        {{employee.title}}
+                    </td>
+                    <td>
+                        {{employee.name}}
+                    </td>
+
+                    <td>
+                        {{employee.email}}
+                    </td>
+                    <td>
+                        {{employee.age}}
+                    </td>
+                </tr>
+            </tbody>
+            {%endfor%}
+        </table>
+</div>-->
+{% endblock %}
